@@ -2,20 +2,19 @@
 @import url("bower_components/skeleton/css/normalize.css");
 @import url("bower_components/font-awesome/css/font-awesome.css");
 
+@import url(http://fonts.googleapis.com/css?family=Nothing+You+Could+Do);
+
 /* module css */
 
 /*-----visits-----*/
 @import url("modules/visits/main.css");
 
-/*----elastic menu-----*/
-@import url("modules/elasticmenu/main.css");
-
-
-/*----Research blog----*/
-@import url("modules/research/main.css");
-
 /*-----Interactable map----*/
 @import url("modules/svgglobe/main.css");
+
+body {
+    background: #fff;
+}
 
 .globe {
     position: absolute;

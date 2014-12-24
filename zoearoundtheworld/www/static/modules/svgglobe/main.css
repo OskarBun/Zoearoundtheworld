@@ -37,10 +37,10 @@ path.fade{
 }
 
 .visited :hover {
-  fill: #e7cb94;
+  fill: #e7cb92;
 }
 
 .boundaries {
-  fill: none;
-  stroke: #fff;
+    fill: none;
+    stroke: #fff;
 }

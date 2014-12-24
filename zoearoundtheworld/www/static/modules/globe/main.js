@@ -9,13 +9,11 @@ define([
             this.appl = params.appl;
             window.globe_panel = this;
             this.animate = null;
-            this.view = ko.observable("closed");
             this.visited = [];
         }
 
         Panel.prototype.init = function() {
             this.get_visited();
-            this.appl.componentsignals.mapView.add(this.view);
         };
 
         Panel.prototype.get_visited = function() {
@@ -31,6 +29,7 @@ define([
                     this.visited = response.result;
                     this.appl.componentsignals.visited.dispatch(response.result);
                     this.load_globe();
+                    document.addEventListener("click", this.animate)
                 }.bind(this)
             );
         };
@@ -93,7 +92,7 @@ define([
 
             }
 
-            d3.json("static/countries.topo.json", function (error, world) {
+            d3.json("static/countries2.topo.json", function (error, world) {
                 land = topojson.feature(world, world.objects.countries);
                 visit = {"type" : "FeatureCollection",
                     "features": land.features.filter(function(d){
@@ -122,7 +121,7 @@ define([
                             pause = false;
                         });
                 } else {
-                    document.querySelector(".enter").style.visibility = "hidden";
+                    document.removeEventListener("click", this.animate);
                     pause = true;
                     canvas
                         .transition()
@@ -146,7 +145,6 @@ define([
                             })
                             .each("end", function() {
                                 this.enter();
-                                console.log(projection)
                             }.bind(this));
                     }
             }

@@ -45,7 +45,7 @@ define([
                 .attr("width", this.width)
                 .attr("height", this.height);
 
-            d3.json("static/countries.topo.json", function (error, world) {
+            d3.json("static/countries2.topo.json", function (error, world) {
                 var land = topojson.feature(world, world.objects.countries).features,
                     visit = land.filter(function (d) {
                         return this.visited().indexOf(d.properties.name) != -1;
@@ -134,6 +134,7 @@ define([
             this.g.selectAll("path")
                         .classed("fade", function(d){return d != this.active()}.bind(this))
                         .on("mouseover", null);
+            this.name(d.properties.name);
 
             this.svg.transition()
                 .duration(750)
