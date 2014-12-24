@@ -1,0 +1,12 @@
+.entryform{
+    max-height: 0;
+    transition: max-height 0.5s;
+}
+
+.entryform.open {
+    max-height: 600px;
+}
+
+.add-entry {
+    text-align: center;
+}

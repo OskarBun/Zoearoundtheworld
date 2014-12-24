@@ -1,0 +1,15 @@
+<form data-bind="submit:save">
+  <div class="row">
+    <div class="six columns">
+      <label for="titleInput">Title</label>
+      <input class="u-full-width" type="text" placeholder="title" id="titleInput" data-bind="value:title">
+    </div>
+    <div class="six columns">
+      <label for="dateInput">Date</label>
+      <input type="date" data-bind="value:date" id="dateInput">
+    </div>
+  </div>
+  <label for="textInput">What did you do?</label>
+  <textarea class="u-full-width" placeholder="Great things?" id="textInput" data-bind="value:text"></textarea>
+  <input class="button-primary" type="submit" value="Submit">
+</form>

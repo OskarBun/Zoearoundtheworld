@@ -1,0 +1,46 @@
+.map {
+    position: relative;
+    top: 10px;
+}
+
+
+.name {
+    width: 100%;
+    text-align: center;
+}
+
+path{
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+path.fade{
+    opacity: 0;
+}
+
+.map-return{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+.land {
+  fill: #31a354;
+}
+
+.land :hover {
+  fill: #74c476;
+}
+
+.visited {
+  fill: #e7ba52;
+}
+
+.visited :hover {
+  fill: #e7cb94;
+}
+
+.boundaries {
+  fill: none;
+  stroke: #fff;
+}
