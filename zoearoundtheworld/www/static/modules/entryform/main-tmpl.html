@@ -2,13 +2,13 @@
   <div class="row">
     <div class="six columns">
       <label for="titleInput">Title</label>
-      <input class="u-full-width" type="text" placeholder="title" id="titleInput" data-bind="value:title">
+      <input class="u-full-width" type="text" placeholder="Title" id="titleInput" data-bind="value:title">
     </div>
     <div class="six columns">
       <label >Date</label>
-      <select data-bind="value:day, options:dayopt, optionsCaption:'Day', enable:month()&&year()"></select>
+      <select data-bind="value:year, options:yearopt, optionsCaption:'Day'"></select>
       <select data-bind="value:month, options:monthopt, optionsCaption:'Month'"></select>
-      <select data-bind="value:year, options:yearopt, optionsCaption:'Year'"></select>
+      <select data-bind="value:day, options:dayopt, optionsCaption:'Year', enable:month()&&year()"></select>
     </div>
   </div>
   <label for="textInput">What did you do?</label>
